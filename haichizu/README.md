@@ -24,3 +24,20 @@ pip install ezdxf matplotlib numpy
 python3 make_haichizu.py
 python3 render.py haichizu_A-005_trace.dxf haichizu_A-005_trace.pdf haichizu_A-005_trace.png
 ```
+
+## 施設案内情報入り配置図（カラー）
+`haichizu_A-005_annai.dxf / .pdf / .png` は、上のトレース図に施設案内図とアクセスマップの情報を重ねたものです（`make_annai.py` で作成）。
+
+- 施設名：体育館（アダストリアみとアリーナ）、ロータリー、いこいの広場、テニスコート、広場
+- 駐車場：設計台数とイベント時の運用台数を併記
+  - 一般利用者用駐車場 291台 ＝ 事前予約制有料駐車場Ａ 280台
+  - 駐車場兼イベント広場 211台 ＝ 事前予約制有料駐車場Ｂ 100台
+  - 車いす席購入者駐車場（⑩車椅子駐車場2 の位置）、関係者用駐車場
+- 記号：建物出入口▼、車椅子使用者用駐車場、駐輪場、臨時バス停（東町運動公園体育館前）
+- 出入口と「至 国道50号（スポーツセンター入口交差点）」の矢印
+- 左下に周辺の案内図（国道50号、偕楽園北口、大工町三丁目バス停、至 水戸駅北口、歴史館入口）
+
+```
+python3 make_annai.py
+COLOR=1 python3 render.py haichizu_A-005_annai.dxf haichizu_A-005_annai.pdf haichizu_A-005_annai.png
+```

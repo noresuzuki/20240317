@@ -520,5 +520,6 @@ ftext("※本図は原図写真からのトレースによる概略図です。�
       "Y16–Y1=92,600 を基準に換算（誤差 数m程度）。施工・申請には原図を使用してください。",
       10, TB + 6, 2.6)
 
-doc.saveas("haichizu_A-005_trace.dxf")
-print("stalls: general", n_gen, " event", n_evt, " staff", n_rel)
+if __name__ == "__main__":
+    doc.saveas("haichizu_A-005_trace.dxf")
+    print("stalls: general", n_gen, " event", n_evt, " staff", n_rel)
